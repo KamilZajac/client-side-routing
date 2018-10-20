@@ -43,7 +43,7 @@ export class Router {
                 const data = JSON.parse(request.responseText);
                 this.renderTemplate(data, route.template);
             } else {
-                console.log('dupa');
+                console.log('error');
             }
         };
         request.onerror = function () {
@@ -64,7 +64,7 @@ export class Router {
 
                 this.view.innerHTML = Mustache.render(elem, data);
             } else {
-                console.log('dupa');
+                console.log('error');
             }
         };
         request.onerror = function () {
